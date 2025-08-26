@@ -132,12 +132,9 @@ jobs:
         with:
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,"name=name=${{ env.DOCKERHUB_REPO }},${{ env.GHCR_REPO }}",push-by-digest=true,name-canonical=true,push=false
+          outputs: type=image,"name=${{ env.DOCKERHUB_REPO }},${{ env.GHCR_REPO }}",push-by-digest=true,name-canonical=true,push=true
           context: ./build
           file: ./build/Dockerfile
-          tags: |
-            "${{ env.DOCKERHUB_REPO }}:latest"
-            "${{ env.GHCR_REPO }}:latest"
           provenance: false
           sbom: false
           build-args: |
@@ -163,6 +160,9 @@ jobs:
     needs:
       - build
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
       - name: Download digests
         uses: actions/download-artifact@v4
         with:
@@ -219,6 +219,7 @@ jobs:
           exit-code: 0
           severity: 'CRITICAL,HIGH'
           output: 'trivy-results.sarif'
+
       - name: Upload Trivy scan SARIF report
         uses: github/codeql-action/upload-sarif@v3
         with:
