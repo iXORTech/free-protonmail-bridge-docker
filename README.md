@@ -2,7 +2,7 @@
 
 This is an unofficial Docker container of the [free fork](https://github.com/mnixry/proton-bridge) of [ProtonMail Bridge](https://protonmail.com/bridge/). Some of the scripts are based on [Hendrik Meyer's work](https://gitlab.com/T4cC0re/protonmail-bridge-docker).
 
-<!-- Docker Hub: [https://hub.docker.com/r/shenxn/protonmail-bridge](https://hub.docker.com/r/shenxn/protonmail-bridge) -->
+Docker Hub: [https://hub.docker.com/r/ixortech/free-protonmail-bridge](https://hub.docker.com/r/ixortech/free-protonmail-bridge)
 
 GitHub: [https://github.com/iXORTech/free-protonmail-bridge-docker](https://github.com/iXORTech/free-protonmail-bridge-docker)
 
