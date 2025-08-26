@@ -12,16 +12,12 @@ We now support ARM devices (`arm64` and `arm/v7`)! Use the images tagged with `b
 
 ## Tags
 
-There are two types of images.
- - `deb`: Images based on the official [.deb release](https://protonmail.com/bridge/install). It only supports the `amd64` architecture.
- - `build`: Images based on the [source code](https://github.com/ProtonMail/proton-bridge). It supports `amd64`, `arm64`, `arm/v7` and `riscv64`. Supporting to more architectures is possible. PRs are welcome.
+There are only one type of images in this fork.
+ - `build`: Images based on the [source code](https://github.com/mnixry/proton-bridge). It supports `amd64`, `arm64`, `arm/v7` and `riscv64`. Supporting to more architectures is possible. Please PRs to [upstream](https://github.com/shenxn/protonmail-bridge-docker).
 
 tag | description
  -- | --
-`latest` | latest `deb` image
-`[version]` | `deb` images
-`build` | latest `build` image
-`[version]-build` | `build` images
+`latest` | latest `build` image
 
 ## Initialization
 
