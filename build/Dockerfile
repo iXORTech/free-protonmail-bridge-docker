@@ -7,12 +7,12 @@ ARG version
 RUN apt-get update && apt-get install -y golang build-essential libsecret-1-dev
 
 # Build
-ADD https://github.com/ProtonMail/proton-bridge.git#${version} /build/
+ADD https://github.com/mnixry/proton-bridge.git /build/
 WORKDIR /build/
 RUN make build-nogui vault-editor
 
 FROM debian:sid-slim
-LABEL maintainer="Simon Felding <sife@adm.ku.dk>"
+LABEL maintainer="Qubik65536 <qubik65536@qubik65536.top>"
 
 EXPOSE 25/tcp
 EXPOSE 143/tcp
